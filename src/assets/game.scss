@@ -1,0 +1,36 @@
+.tictac {
+  .game-board {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .dot-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc(100% / 3);
+      height: calc(100% / 3);
+      border-right: 5px solid black;
+      border-bottom: 5px solid black;
+      transition: all 0.2s linear;
+      &:hover {
+        background-color: #ececec;
+      }
+      img {
+        object-fit: contain;
+        width: 60%;
+        height: 60%;
+      }
+      &:nth-child(3n + 3) {
+        border-right: none;
+      }
+      &:nth-child(n + 7) {
+        border-bottom: none;
+      }
+    }
+  }
+}
